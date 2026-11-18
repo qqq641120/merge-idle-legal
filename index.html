@@ -9,6 +9,7 @@
       body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
       h1 { margin-bottom: 0; }
       .muted { opacity: 0.7; }
+      .table-wrap { overflow-x: auto; }
       table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
       th, td { border: 1px solid rgba(127,127,127,0.4); padding: 6px 8px; text-align: left; vertical-align: top; }
       code { font-size: 0.95em; }
@@ -16,77 +17,124 @@
   </head>
   <body>
     <h1>Privacy Policy</h1>
-    <p class="muted">Orb Merge (working title) · Effective date: November 18, 2026</p>
+    <p class="muted">Orb Merge · Effective date: November 19, 2026</p>
 
     <p>
-      This policy explains what information the mobile game <strong>Orb Merge</strong> (the "Game") collects, why, and the
-      choices you have. The Game is intended for users aged 13 and over. We do not knowingly collect personal information
-      from children under 13.
+      This policy explains what information the mobile game <strong>Orb Merge</strong> (the "Game"), made by Moonbun
+      Studio ("we"), collects, why, and the choices you have. The Game is intended for users aged 13 and over. We do not
+      knowingly collect personal information from children under 13.
     </p>
 
     <h2>1. Information we collect</h2>
+    <div class="table-wrap">
     <table>
-      <tr><th>Data</th><th>Source</th><th>Purpose</th></tr>
+      <tr><th>Data</th><th>Collected by</th><th>Purpose</th></tr>
       <tr>
         <td>Anonymous player ID (a random identifier created when you first open the Game; no name, email or login)</td>
         <td>Supabase (our game backend)</td>
-        <td>Cloud backup of your game progress, server time for offline earnings, recording purchases so rewards are delivered exactly once</td>
+        <td>Linking your cloud save and purchases to you, server time for offline earnings, transfer codes for moving to a new phone</td>
       </tr>
       <tr>
-        <td>Game progress (board, coins, gems, levels, settings related to the game)</td>
+        <td>Game data: progress (board, coins, gems, levels, gear, crew), play time, game settings, counts of rewarded ads watched, and a record of the in-game items you received</td>
         <td>Supabase</td>
-        <td>Cloud save / restore and preventing cheating</td>
+        <td>Cloud save and restore, calculating offline earnings, preventing cheating</td>
       </tr>
       <tr>
-        <td>Purchase history (product, store transaction ID, date)</td>
-        <td>Apple App Store / Google Play via RevenueCat, and Supabase</td>
-        <td>Delivering and restoring in-app purchases, preventing duplicate rewards, handling refunds</td>
+        <td>Purchase records (product, store order / transaction ID, date, store)</td>
+        <td>Google Play / Apple App Store, RevenueCat and Supabase</td>
+        <td>Delivering and restoring purchases, delivering each purchase exactly once, handling refunds</td>
+      </tr>
+      <tr>
+        <td>Player ID, purchase receipts, device information (model, operating system, app version, language, country) and IP address</td>
+        <td>RevenueCat</td>
+        <td>Validating purchases with Google and Apple, managing subscriptions</td>
+      </tr>
+      <tr>
+        <td>Technical logs: IP address, device and browser/WebView information (user agent), time of each request</td>
+        <td>Supabase</td>
+        <td>Running and securing the service, investigating errors and abuse. Kept for a limited time.</td>
       </tr>
       <tr>
         <td>Advertising identifiers (IDFA on iOS if you allow tracking, Android Advertising ID / App Set ID), approximate location derived from IP address, ad interactions, device and diagnostic information</td>
         <td>Google AdMob</td>
         <td>Showing ads, measuring ad performance, preventing ad fraud</td>
       </tr>
+      <tr>
+        <td>Your email address and anything you write, if you contact us by email (for example via <em>Settings → Report a problem</em>, which also fills in your Player ID, app version and device type)</td>
+        <td>Us (by email)</td>
+        <td>Answering your message and fixing problems</td>
+      </tr>
     </table>
-    <p>We do not collect your name, email address, contacts, photos or precise location. All data is sent over encrypted connections (HTTPS).</p>
+    </div>
+    <p>
+      We do not collect your name, contacts, photos or precise location. Data is sent over encrypted connections (HTTPS).
+      Reminder notifications are scheduled on your device by the Game itself; no notification data is sent to us, and you
+      can turn them off in <em>Settings</em> or in your phone's settings.
+    </p>
 
     <h2>2. Advertising and your choices</h2>
     <ul>
       <li>On iOS, the Game asks for permission before using your advertising identifier for tracking (App Tracking Transparency). You can change this at any time in iOS Settings → Privacy &amp; Security → Tracking.</li>
       <li>If you are in the European Economic Area, the UK or Switzerland, or another region where consent is required, a consent form from Google is shown before personalized ads are served. You can change your choice at any time in the Game: <em>Settings → Ad privacy settings</em>.</li>
-      <li>On Android you can reset or delete your advertising ID in your device settings.</li>
-      <li>Purchasing <em>Remove Ads</em> removes interstitial ads.</li>
+      <li>On Android you can opt out of personalized ads by deleting your advertising ID in your device settings (Settings → Google → Ads, or Settings → Privacy → Ads, depending on your device).</li>
+      <li>Purchasing <em>Remove Ads</em>, or an active <em>Captain's Club</em> membership, removes interstitial ads.</li>
     </ul>
     <p>Google's use of data is described at <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
 
     <h2>3. Service providers</h2>
     <ul>
       <li><strong>Supabase</strong> – game backend and database (<a href="https://supabase.com/privacy">privacy policy</a>)</li>
-      <li><strong>RevenueCat</strong> – in-app purchase processing and validation (<a href="https://www.revenuecat.com/privacy/">privacy policy</a>)</li>
+      <li><strong>RevenueCat</strong> – in-app purchase validation and subscription management (<a href="https://www.revenuecat.com/privacy/">privacy policy</a>)</li>
       <li><strong>Google AdMob</strong> – advertising (<a href="https://policies.google.com/privacy">privacy policy</a>)</li>
-      <li><strong>Apple App Store / Google Play</strong> – payments; we never receive your payment card details.</li>
+      <li><strong>Google Play / Apple App Store</strong> – payments; we never receive your payment card details.</li>
     </ul>
-    <p>We do not sell your personal information.</p>
-
-    <h2>4. Data retention and deletion</h2>
     <p>
-      Game progress is kept while you play and for up to 24 months after your last session. Purchase records are kept as
-      long as required for tax, accounting and fraud prevention. To request deletion of your data, open an issue at the
-      contact link below and include the <em>Player ID</em> shown in the Game under <em>Settings</em>. Uninstalling the
-      Game removes the data stored on your device.
+      We do not sell your personal information. Our providers may process data in the United States and other countries
+      where they operate, using the safeguards described in their privacy policies.
     </p>
 
-    <h2>5. Your rights</h2>
+    <h2>4. How long we keep data</h2>
+    <ul>
+      <li><strong>Game data and player ID</strong>: kept until you delete it (see below), so your progress is not lost if you take a long break.</li>
+      <li><strong>Purchase records</strong>: after you delete your data, we keep a record of each purchase (product, order ID, date) without your player ID, as long as required for refunds, tax, accounting and fraud prevention. This also stops the same purchase from being delivered twice.</li>
+      <li><strong>Technical logs</strong>: kept for a limited time by Supabase and then deleted automatically.</li>
+      <li><strong>Emails</strong>: kept as long as needed to answer you and follow up.</li>
+    </ul>
+    <p>
+      Data stored on your device is removed when you uninstall the Game. On Android, your phone may include the Game's
+      on-device data in your device backup to your Google account; this is controlled by Google and your device settings.
+    </p>
+
+    <h2 id="delete">5. Deleting your data</h2>
+    <ul>
+      <li><strong>In the Game</strong>: open <em>Settings → Delete my data</em>. This permanently deletes your game data on
+        your phone and on our server, your player ID and transfer codes, and your customer record at RevenueCat. It needs
+        an internet connection and cannot be undone. One-time purchases such as <em>Remove Ads</em> can be restored later
+        with <em>Restore Purchases</em>; purchased gems cannot.</li>
+      <li><strong>By email</strong>: if you no longer have the Game, email
+        <a href="mailto:pocketcometgamesdev@gmail.com">pocketcometgamesdev@gmail.com</a> with the subject "Delete my data"
+        and, if you have it, the <em>Player ID</em> shown in the Game under <em>Settings</em>. We will delete your data within
+        30 days and confirm by email.</li>
+      <li>Deleting your data does <strong>not</strong> cancel a subscription. Cancel <em>Captain's Club</em> in your Google
+        Play or App Store subscription settings.</li>
+    </ul>
+
+    <h2>6. Legal basis and your rights</h2>
+    <p>
+      Where the GDPR or similar laws apply, we process data to provide the Game you asked for (cloud save, purchases), for
+      our legitimate interests in keeping the Game secure and fair (anti-cheat, logs), to meet legal obligations (purchase
+      records), and with your consent for personalized ads.
+    </p>
     <p>
       Depending on where you live (for example under the GDPR or the California Consumer Privacy Act), you may have the
-      right to access, correct, delete or object to the processing of your personal information. Contact us to exercise
-      these rights.
+      right to access, correct, delete or object to the processing of your personal information, and to complain to your
+      local data protection authority. Contact us to exercise these rights.
     </p>
 
-    <h2>6. Changes</h2>
+    <h2>7. Changes</h2>
     <p>We may update this policy. The effective date above will change and significant changes will be announced in the Game.</p>
 
-    <h2>7. Contact</h2>
+    <h2>8. Contact</h2>
     <p>Developer: Moonbun Studio. Questions or requests (including data deletion): <a href="mailto:pocketcometgamesdev@gmail.com">pocketcometgamesdev@gmail.com</a>. You can also use <em>Settings → Report a problem</em> in the Game.</p>
   </body>
 </html>
